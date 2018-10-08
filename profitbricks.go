@@ -296,7 +296,7 @@ func (d *Driver) Create() error {
 						Properties: profitbricks.VolumeProperties{
 							Type:             d.DiskType,
 							Size:             d.DiskSize,
-							Name:             d.MachineName,
+							Name:             fmt.Sprintf("%s-disk", d.MachineName),
 							Image:            image,
 							ImageAlias:       alias,
 							SshKeys:          []string{d.SSHKey},
